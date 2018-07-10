@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Imaging flow cytometry</title>
+    <meta charset="utf-8">
+    <script src="unit.json"></script>
+    <link rel="stylesheet" href="main.css">
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML&delayStartupUntil=configured"></script>
+<!--    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG&delayStartupUntil=configured"></script>-->
+    <script src="js/MathJaxConfig.js"></script>
+</head>
+
+<body>
+    <div class="histogram"></div>
+    <div class="nav_bar">
+        <div class="rightbar">
+
+            <div id="navbartitle">
+                <p>Imaging flow cytometry</p>
+            </div>
+            <img id="dataicon" alt="miss" src="icon/data-storage.png" />
+        </div>
+
+        <div class="selectArea noselect">
+            <div class="selectAreaX">
+                <div class="label">
+                    <svg class="labelSvg" width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="shapeX" height="60" width="60" />
+                        <div class="labelT">X</div>
+                    </svg>
+                </div>
+                <div class="Vselector xVS">
+                    <p class="VselectorT xT">Please choose one</p>
+                    <div class="rta x"></div>
+                </div>
+            </div>
+            <div class="selectAreaY">
+                <div class="label">
+                    <svg class="labelSvg" width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="shapeY" height="60" width="60" />
+                        <div class="labelT">Y</div>
+                    </svg>
+                </div>
+                <div class="Vselector yVS">
+                    <p class="VselectorT yT">Please choose one</p>
+                    <div class="rta y"></div>
+                </div>
+            </div>
+            <div id="inputBtn">
+                <p>Submit</p>
+            </div>
+        </div>
+        <img src="icon/download.png" id="download">
+    </div>
+    <div class="body_content noselect">
+        <div id="dropzone" class="dropzone">Drag in the .xlsx files </div>
+        <h1 id="guide">Please select variables</h1>
+        <div id="appendSvg"></div>
+    </div>
+    <div id="selectbox">
+        <p value="0" class="selectboxAid"><a>NULL</a></p>
+        <p value="1" class="selectboxAid"><a>NULL</a></p>
+        <p value="2" class="selectboxAid"><a>NULL</a></p>
+        <p value="3" class="selectboxAid"><a>NULL</a></p>
+        <p value="4" class="selectboxAid"><a>NULL</a></p>
+    </div>
+    <div id="popup">
+        <div id="popupContent">
+            <p class="poptitle">Error</p>
+            <p class="popupM"></p>
+        </div>
+        <p id="popupB">Cancel</p>
+    </div>
+    <ul class="VselectBox xVSB"></ul>
+    <ul class="VselectBox yVSB"></ul>
+    <div class="recttip_box"></div>
+    <drawzoom>
+        <canvas id="scatter_canvas"></canvas>
+        <canvas id="his_canvas"></canvas>
+    </drawzoom>
+    <div id="openHis">
+        <img id="zoom-rect" src="icon/show.png" alt="his">
+    </div>
+    <ul id="downloadPNGOption">
+        <li value="scatter">Scatter</li>
+        <li value="his">Histogram</li>
+    </ul>
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/xlsx.full.min.js"></script>
+    <script src="js/d3.js"></script>
+    <script src="js/d3tip.js"></script>
+    <script src="js/x2j.js"></script>
+    <script src="js/changeUnit.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquerycolor.js"></script>
+
+    <script src="js/html2canvas.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
